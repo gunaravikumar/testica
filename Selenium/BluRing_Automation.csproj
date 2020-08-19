@@ -1,0 +1,2466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\PdfiumViewer.Native.x86.v8-xfa.2018.4.8.256\build\PdfiumViewer.Native.x86.v8-xfa.props" Condition="Exists('packages\PdfiumViewer.Native.x86.v8-xfa.2018.4.8.256\build\PdfiumViewer.Native.x86.v8-xfa.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{077F2F8B-D076-4359-9208-F6C2AD0ADA08}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Selenium</RootNamespace>
+    <AssemblyName>Selenium</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>d:\selenium\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>70437E2A5F8434D65F6377C94F57B35800790149</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>big_logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>packages\Accord.3.8.0\lib\net45\Accord.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accord.Imaging, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>packages\Accord.Imaging.3.8.0\lib\net45\Accord.Imaging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accord.Math, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>packages\Accord.Math.3.8.0\lib\net45\Accord.Math.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accord.Math.Core, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>packages\Accord.Math.3.8.0\lib\net45\Accord.Math.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accord.Statistics, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>packages\Accord.Statistics.3.8.0\lib\net45\Accord.Statistics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cassia, Version=2.0.0.60, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Cassia.2.0.0.60\lib\2.0\Cassia.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>packages\Castle.Core.3.3.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Dicom">
+      <HintPath>DicomDlls\Dicom.dll</HintPath>
+    </Reference>
+    <Reference Include="Dicom">
+      <HintPath>DicomDlls\Dicom.dll</HintPath>
+    </Reference>
+    <Reference Include="EAGetMail45, Version=4.6.2.2, Culture=neutral, PublicKeyToken=e10a0812eb29cf94, processorArchitecture=MSIL">
+      <HintPath>Dlls\EAGetMail45.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <!-- <Reference Include="Interop.TestComplete, Version=12.20.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>TestCompleteComponents\Interop.TestComplete.dll</HintPath>
+    </Reference> -->
+    <Reference Include="Ghostscript.NET, Version=1.2.1.0, Culture=neutral, PublicKeyToken=f85051de34525b59, processorArchitecture=MSIL">
+      <HintPath>packages\Ghostscript.NET.1.2.1\lib\net40\Ghostscript.NET.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.6.5.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>packages\HtmlAgilityPack.1.6.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Interop.Merge70, Version=7.0.0.0, Culture=neutral, PublicKeyToken=3db086307f87195f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\TestReportGenerator\FileComparisonReport\Araxis\Interop.Merge70.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.TestComplete, Version=12.20.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>TestCompleteComponents\Interop.TestComplete.dll</HintPath>
+    </Reference>
+    <Reference Include="IronOcr, Version=4.3.0.16185, Culture=neutral, PublicKeyToken=5f366048dc436899, processorArchitecture=MSIL">
+      <HintPath>packages\IronOcr.4.3.0.1\lib\net40\IronOcr.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.12.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.12\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Magick.NET-Q16-x86, Version=7.12.0.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=x86">
+      <HintPath>packages\Magick.NET-Q16-x86.7.12.0\lib\net40\Magick.NET-Q16-x86.dll</HintPath>
+    </Reference>
+    <Reference Include="NetOffice, Version=1.7.3.0, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
+      <HintPath>packages\NetOffice.Core.Net40.1.7.3.0\lib\net40\NetOffice.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=a39beb0835c43c8e, processorArchitecture=MSIL">
+      <HintPath>packages\NetOffice.Core.Net40.1.7.3.0\lib\net40\OfficeApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="OpenPop, Version=2.0.6.1120, Culture=neutral, PublicKeyToken=6bdb97f144b7efc8, processorArchitecture=MSIL">
+      <HintPath>packages\OpenPop.NET.2.0.6.1120\lib\net40\OpenPop.dll</HintPath>
+    </Reference>
+    <Reference Include="OSIcon, Version=3.0.0.0, Culture=neutral, PublicKeyToken=2d4a153a84ea7847, processorArchitecture=MSIL">
+      <HintPath>packages\OSIcon.3.0.0.0\lib\OSIcon.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfiumViewer, Version=2.13.0.0, Culture=neutral, PublicKeyToken=91e4789cfb0609e0, processorArchitecture=MSIL">
+      <HintPath>packages\PdfiumViewer.2.13.0.0\lib\net20\PdfiumViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Controls">
+      <HintPath>RanorexDlls\Ranorex.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Core">
+      <HintPath>RanorexDlls\Ranorex.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Core.Injector">
+      <HintPath>RanorexDlls\Ranorex.Core.Injector.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Core.WinApi">
+      <HintPath>RanorexDlls\Ranorex.Core.WinApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Libs.IeAddon3">
+      <HintPath>RanorexDlls\Ranorex.Libs.IeAddon3.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Libs.WinForms">
+      <HintPath>RanorexDlls\Ranorex.Libs.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.ChromeWeb">
+      <HintPath>RanorexDlls\Ranorex.Plugin.ChromeWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Flex">
+      <HintPath>RanorexDlls\Ranorex.Plugin.Flex.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Java">
+      <HintPath>RanorexDlls\Ranorex.Plugin.Java.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Mobile">
+      <HintPath>RanorexDlls\Ranorex.Plugin.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.MozillaWeb">
+      <HintPath>RanorexDlls\Ranorex.Plugin.MozillaWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Msaa">
+      <HintPath>RanorexDlls\Ranorex.Plugin.Msaa.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Office">
+      <HintPath>RanorexDlls\Ranorex.Plugin.Office.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Qt">
+      <HintPath>RanorexDlls\Ranorex.Plugin.Qt.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.RawText">
+      <HintPath>RanorexDlls\Ranorex.Plugin.RawText.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Sap">
+      <HintPath>RanorexDlls\Ranorex.Plugin.Sap.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Uia">
+      <HintPath>RanorexDlls\Ranorex.Plugin.Uia.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Web">
+      <HintPath>RanorexDlls\Ranorex.Plugin.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Win32">
+      <HintPath>RanorexDlls\Ranorex.Plugin.Win32.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WinForms">
+      <HintPath>RanorexDlls\Ranorex.Plugin.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Wpf">
+      <HintPath>RanorexDlls\Ranorex.Plugin.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WpfProxy">
+      <HintPath>RanorexDlls\Ranorex.Plugin.WpfProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="S22.Imap, Version=3.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\S22.Imap.3.6.0.0\lib\net40\S22.Imap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TestStack.White, Version=0.13.0.0, Culture=neutral, PublicKeyToken=2672efbf3e161801, processorArchitecture=MSIL">
+      <HintPath>packages\TestStack.White.0.13.3\lib\net40\TestStack.White.dll</HintPath>
+    </Reference>
+    <Reference Include="TestStack.White.Reporting, Version=0.13.0.0, Culture=neutral, PublicKeyToken=2672efbf3e161801, processorArchitecture=MSIL">
+      <HintPath>packages\TestStack.White.ScreenObjects.0.13.3\lib\net40\TestStack.White.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="TestStack.White.ScreenObjects, Version=0.13.0.0, Culture=neutral, PublicKeyToken=2672efbf3e161801, processorArchitecture=MSIL">
+      <HintPath>packages\TestStack.White.ScreenObjects.0.13.3\lib\net40\TestStack.White.ScreenObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationClientsideProviders" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="VBIDEApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=931cec8882205047, processorArchitecture=MSIL">
+      <HintPath>packages\NetOffice.Core.Net40.1.7.3.0\lib\net40\VBIDEApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Selenium.WebDriver.3.8.0\lib\net45\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Selenium.Support.3.8.0\lib\net45\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="XmlDiffPatch">
+      <HintPath>packages\XMLDiffPatch.1.0.8.28\lib\net\XmlDiffPatch.dll</HintPath>
+    </Reference>
+    <Reference Include="XmlDiffPatch.View, Version=1.0.1493.40755, Culture=neutral">
+      <HintPath>packages\XMLDiffPatch.1.0.8.28\lib\net\XmlDiffPatch.View.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scripts\Pages\eHR\EHR.cs" />
+    <Compile Include="Scripts\Pages\iCAInstaller\iCAInstaller.cs" />
+    <Compile Include="Scripts\Pages\iCN\iCNOrderingPortal.cs" />
+    <Compile Include="Scripts\Pages\iCN\iCNPortal.cs" />
+    <Compile Include="Scripts\Pages\iConnect\BluRingTools.cs" />
+    <Compile Include="Scripts\Pages\iConnect\BluRingViewer.cs" />
+    <Compile Include="Scripts\Pages\iConnect\BluRingZ3DViewerPage.cs" />
+    <Compile Include="Scripts\Pages\iConnect\HTML5_Uploader.cs" />
+    <Compile Include="Scripts\Pages\iConnect\Imager.cs" />
+    <Compile Include="Scripts\Pages\iConnect\PreprocessingUtils.cs" />
+    <Compile Include="Scripts\Pages\iConnect\IntegratorStudies.cs" />
+    <Compile Include="Scripts\Pages\iConnect\LaunchEmailedStudy.cs" />
+    <Compile Include="Scripts\Pages\iConnect\LdapDataMapping.cs" />
+    <Compile Include="Scripts\Pages\iConnect\MeaningfulUseReport.cs" />
+    <Compile Include="Scripts\Pages\iConnect\PatientsStudy.cs" />
+    <Compile Include="Scripts\Pages\iConnect\StudyAuthorizationUtils.cs" />
+    <Compile Include="Scripts\Pages\iConnect\QueryParamters.cs" />
+    <Compile Include="Scripts\Pages\iConnect\StudyViewer.cs" />
+    <Compile Include="Scripts\Pages\BasePage\Locators.cs" />
+    <Compile Include="Scripts\Pages\iConnect\Patients.cs" />
+    <Compile Include="Scripts\Pages\iConnect\TestFixtures.cs" />
+    <Compile Include="Scripts\Pages\iConnect\Viewer.cs" />
+    <Compile Include="Scripts\Pages\iConnect\WADOClient.cs" />
+    <Compile Include="Scripts\Pages\iConnect\Z3DTools.cs" />
+    <Compile Include="Scripts\Pages\MergeDominator\Dominator.cs" />
+    <Compile Include="Scripts\Pages\PACS\MpacMonitors.cs" />
+    <Compile Include="Scripts\Pages\Z3D\Z3D.cs" />
+    <Compile Include="Scripts\Reusable\Generic\ActionsExtensions.cs" />
+    <Compile Include="Scripts\Reusable\Generic\ComparisonClass.cs" />
+    <Compile Include="Scripts\Reusable\Generic\VideoCaptureUtil.cs" />
+    <Compile Include="Scripts\Tests\ConferenceListBR.cs" />
+    <Compile Include="Scripts\Tests\HighAvailability.cs" />
+    <Compile Include="Scripts\Tests\HUS.cs" />
+    <Compile Include="Scripts\Tests\ReliabilityTest.cs" />
+    <Compile Include="Scripts\Tests\UnityPACSIntegration.cs" />
+    <Compile Include="Scripts\Tests\UVLocalizer.cs" />
+    <Compile Include="Scripts\UpgradeUtility\DatabaseComparisonUtility.cs" />
+    <Compile Include="Scripts\Reusable\Generic\DataBaseUtil.cs" />
+    <Compile Include="Scripts\Reusable\Generic\EmailUtils.cs" />
+    <Compile Include="Scripts\Reusable\Generic\FileUtils.cs" />
+    <Compile Include="Scripts\Reusable\Generic\PauseTimer.cs" />
+    <Compile Include="Scripts\Reusable\Generic\Pop3EmailUtil.cs" />
+    <Compile Include="Scripts\Reusable\Generic\NetStat.cs" />
+    <Compile Include="Scripts\Reusable\Generic\ScreenShot.cs" />
+    <Compile Include="Scripts\DriverScript\TestRunner.cs" />
+    <Compile Include="Scripts\Pages\BasePage\BasePage.cs" />
+    <Compile Include="Scripts\Pages\HoldingPen\Configure.cs" />
+    <Compile Include="Scripts\Pages\HoldingPen\WorkFlow.cs" />
+    <Compile Include="Scripts\Pages\iConnect\DomainManagement.cs" />
+    <Compile Include="Scripts\Pages\iConnect\ExamImporter.cs" />
+    <Compile Include="Scripts\Pages\iConnect\EnrollNewUser.cs" />
+    <Compile Include="Scripts\Pages\iConnect\MyProfile.cs" />
+    <Compile Include="Scripts\Pages\HoldingPen\HPHomePage.cs" />
+    <Compile Include="Scripts\Pages\HoldingPen\HPLogin.cs" />
+    <Compile Include="Scripts\Pages\iConnect\Inbounds.cs" />
+    <Compile Include="Scripts\Pages\iConnect\Login.cs" />
+    <Compile Include="Scripts\Pages\iConnect\Maintenance.cs" />
+    <Compile Include="Scripts\Pages\iConnect\Outbounds.cs" />
+    <Compile Include="Scripts\Pages\iConnect\POP.cs" />
+    <Compile Include="Scripts\Pages\iConnect\RoleManagement.cs" />
+    <Compile Include="Scripts\Pages\iConnect\OnlineHelp.cs" />
+    <Compile Include="Scripts\Pages\iConnect\Studies.cs" />
+    <Compile Include="Scripts\Pages\iConnect\SystemSettings.cs" />
+    <Compile Include="Scripts\Pages\iConnect\UserManagement.cs" />
+    <Compile Include="Scripts\Pages\iConnect\WebUploader.cs" />
+    <Compile Include="Scripts\Pages\iConnect\Image Sharing.cs" />
+    <Compile Include="Scripts\Pages\iConnect\IEnum.cs" />
+    <Compile Include="Scripts\Pages\iConnect\UserPreferences.cs" />
+    <Compile Include="Scripts\Pages\iConnect\ConferenceFolders.cs" />
+    <Compile Include="Scripts\Pages\iConnect\Localization.cs" />
+    <Compile Include="Scripts\Pages\PACS\MpacHomePage.cs" />
+    <Compile Include="Scripts\Pages\PACS\MpacLogin.cs" />
+    <Compile Include="Scripts\Pages\PACS\MpacTool.cs" />
+    <Compile Include="Scripts\Pages\PACS\MpacConfiguration.cs" />
+    <Compile Include="Scripts\Pages\Putty\Putty.cs" />
+    <Compile Include="Scripts\Pages\MergeServiceTool\ServiceTool.cs" />
+    <Compile Include="Scripts\Reusable\Generic\AjaxWait.cs" />
+    <Compile Include="Scripts\Reusable\Generic\PdfExecutionReport.cs" />
+    <Compile Include="Scripts\Reusable\Generic\RanorexObjects.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts\Reusable\Generic\ReadXML.cs" />
+    <Compile Include="Scripts\Reusable\Generic\SimulateAction.cs" />
+    <Compile Include="Scripts\Reusable\Generic\TestCaseResult.cs" />
+    <Compile Include="Scripts\Reusable\Generic\TestCompleteAction.cs" />
+    <Compile Include="Scripts\Reusable\Generic\TestCompleteConnect.cs" />
+    <Compile Include="Scripts\Reusable\Generic\TestStep.cs" />
+    <Compile Include="Scripts\Reusable\Generic\WindowScreenShot.cs" />
+    <Compile Include="Scripts\Reusable\Generic\WPFObjects.cs" />
+    <Compile Include="Scripts\Reusable\Generic\SocketClient.cs" />
+    <Compile Include="Scripts\Config\ConfigParams.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\Reusable\Generic\BrowserObjects.cs" />
+    <Compile Include="Scripts\Reusable\Generic\HTMLReport.cs" />
+    <Compile Include="Scripts\Reusable\Generic\Logger.cs" />
+    <Compile Include="Scripts\Reusable\Generic\PDFReport.cs" />
+    <Compile Include="Scripts\Reusable\Generic\ReadExcel.cs" />
+    <Compile Include="Scripts\Tests\Administration.cs" />
+    <Compile Include="Scripts\Tests\AdministrationBlueRing.cs" />
+    <Compile Include="Scripts\Tests\AuthenticationandAuthorization.cs" />
+    <Compile Include="Scripts\Tests\BasicToolBluRing.cs" />
+    <Compile Include="Scripts\Tests\BluRing3DAllControls.cs" />
+    <Compile Include="Scripts\Tests\BluringCardioCINE.cs" />
+    <Compile Include="Scripts\Tests\BluRingDevelopersLog.cs" />
+    <Compile Include="Scripts\Tests\BluRingFederatedQuery.cs" />
+    <Compile Include="Scripts\Tests\BluRingLicensing.cs" />
+    <Compile Include="Scripts\Tests\BluRingUDI.cs" />
+    <Compile Include="Scripts\Tests\BluringIntegratorDesktop.cs" />
+    <Compile Include="Scripts\Tests\BluringInternationalization.cs" />
+    <Compile Include="Scripts\Tests\Browser.cs" />
+    <Compile Include="Scripts\Tests\Browser_BR.cs" />
+    <Compile Include="Scripts\Tests\CalciumScoring.cs" />
+    <Compile Include="Scripts\Tests\Configuration.cs" />
+    <Compile Include="Scripts\Tests\CurvedMPR3DPath.cs" />
+    <Compile Include="Scripts\Tests\CurvedMPR_General.cs" />
+    <Compile Include="Scripts\Tests\CurvedMPR_NC_CurveDrawTool.cs" />
+    <Compile Include="Scripts\Tests\Curved_StraightenedMPRControl.cs" />
+    <Compile Include="Scripts\Tests\CustomizeToolBar.cs" />
+    <Compile Include="Scripts\Tests\DataMasking.cs" />
+    <Compile Include="Scripts\Tests\Demographics.cs" />
+    <Compile Include="Scripts\Tests\DevelopersLog.cs" />
+    <Compile Include="Scripts\Tests\Dicom6000Overlay.cs" />
+    <Compile Include="Scripts\Tests\DicomSOP.cs" />
+    <Compile Include="Scripts\Tests\DICOMSOPClassSupport.cs" />
+    <Compile Include="Scripts\Tests\DignityLdap.cs" />
+    <Compile Include="Scripts\Tests\DirectDicomQuery.cs" />
+    <Compile Include="Scripts\Tests\EmailStudy.cs" />
+    <Compile Include="Scripts\Tests\ExamList.cs" />
+    <Compile Include="Scripts\Tests\ExternalApplicationPriorsTrans.cs" />
+    <Compile Include="Scripts\Tests\ExternalApplications.cs" />
+    <Compile Include="Scripts\Tests\Federated_Query.cs" />
+    <Compile Include="Scripts\Tests\FinalChecking.cs" />
+    <Compile Include="Scripts\Tests\Flyout_Reports.cs" />
+    <Compile Include="Scripts\Tests\ForeignSeries.cs" />
+    <Compile Include="Scripts\Tests\Global.cs" />
+    <Compile Include="Scripts\Tests\GlobalStack.cs" />
+    <Compile Include="Scripts\Tests\GSPS.cs" />
+    <Compile Include="Scripts\Tests\CardioCINE.cs" />
+    <Compile Include="Scripts\Tests\Hazard.cs" />
+    <Compile Include="Scripts\Tests\HTML5Uploader.cs" />
+    <Compile Include="Scripts\Tests\HTML5Uploader_Integrator.cs" />
+    <Compile Include="Scripts\Tests\ImageSharing.cs" />
+    <Compile Include="Scripts\Tests\Installation_BR.cs" />
+    <Compile Include="Scripts\Tests\Installation_Upgrade.cs" />
+    <Compile Include="Scripts\Tests\IntegratorDesktop.cs" />
+    <Compile Include="Scripts\Tests\Integrator_Uploader.cs" />
+    <Compile Include="Scripts\Tests\Internationalization.cs" />
+    <Compile Include="Scripts\Tests\InternationalizationSupport.cs" />
+    <Compile Include="Scripts\Tests\IPID.cs" />
+    <Compile Include="Scripts\Tests\LdapArchiving.cs" />
+    <Compile Include="Scripts\Tests\LdapMain.cs" />
+    <Compile Include="Scripts\Tests\LegacyPatientSearch.cs" />
+    <Compile Include="Scripts\Tests\Licensing.cs" />
+    <Compile Include="Scripts\Tests\Localizer.cs" />
+    <Compile Include="Scripts\Tests\MammoHangingSupport.cs" />
+    <Compile Include="Scripts\Tests\MeaningfulUse.cs" />
+    <Compile Include="Scripts\Tests\MobileiPAD.cs" />
+    <Compile Include="Scripts\Tests\MPRNavigation.cs" />
+    <Compile Include="Scripts\Tests\MPRResultControl.cs" />
+    <Compile Include="Scripts\Tests\MPRView.cs" />
+    <Compile Include="Scripts\Tests\MultiVolumeSeriesSupport.cs" />
+    <Compile Include="Scripts\Tests\PasswordSecurity.cs" />
+    <Compile Include="Scripts\Tests\PDFReport.cs" />
+    <Compile Include="Scripts\Tests\POP.cs" />
+    <Compile Include="Scripts\Tests\PreProcessing.cs" />
+    <Compile Include="Scripts\Tests\PresentationStateHandling.cs" />
+    <Compile Include="Scripts\Tests\Reconciliation.cs" />
+    <Compile Include="Scripts\Tests\SaveWork_ToStudy.cs" />
+    <Compile Include="Scripts\Tests\SixupView.cs" />
+    <Compile Include="Scripts\Tests\StudyPanel.cs" />
+    <Compile Include="Scripts\Tests\ThreeDControls.cs" />
+    <Compile Include="Scripts\Tests\ThreeDView.cs" />
+    <Compile Include="Scripts\Tests\ThreeDViewerPage.cs" />
+    <Compile Include="Scripts\Tests\Thumbnails.cs" />
+    <Compile Include="Scripts\Tests\ThumbnailSplittingandOrdering.cs" />
+    <Compile Include="Scripts\Tests\Scaling.cs" />
+    <Compile Include="Scripts\Tests\Study_Authorization.cs" />
+    <Compile Include="Scripts\Tests\ToolBoxConfiguration.cs" />
+    <Compile Include="Scripts\Tests\Twoxlimit.cs" />
+    <Compile Include="Scripts\Tests\ViewerTest_3D.cs" />
+    <Compile Include="Scripts\Tests\Wado.cs" />
+    <Compile Include="Scripts\Tests\RemoteDataSource.cs" />
+    <Compile Include="Scripts\Tests\WebUploader.cs" />
+    <Compile Include="Scripts\Tests\EnvironmentSetup.cs" />
+    <Compile Include="Scripts\Tests\EnhancedThumbnail.cs" />
+    <Compile Include="Scripts\Tests\HistoryPanel.cs" />
+    <Compile Include="Scripts\Tests\Sanity.cs" />
+    <Compile Include="Scripts\Tests\LinkedScrolling.cs" />
+    <Compile Include="Scripts\Tests\BasicTools.cs" />
+    <Compile Include="Scripts\Tests\PriorSeries.cs" />
+    <Compile Include="Scripts\Tests\ViewerLayoutScope.cs" />
+    <Compile Include="Scripts\Tests\EnhancedStudyList.cs" />
+    <Compile Include="Scripts\Tests\PatientComparisonStrategy.cs" />
+    <Compile Include="Scripts\Tests\ConferenceLists.cs" />
+    <Compile Include="Scripts\Tests\ExternalApplicationEmailStudy.cs" />
+    <Compile Include="Scripts\Tests\ExternalApplicationDataTransfer.cs" />
+    <Compile Include="Scripts\Tests\ExternalApplicationDownloader.cs" />
+    <Compile Include="Scripts\Tests\Sanity_Checklist.cs" />
+    <Compile Include="Scripts\Tests\Pre_fetchCache.cs" />
+    <Compile Include="Scripts\Tests\AdministrationSecurity.cs" />
+    <Compile Include="Scripts\Tests\AdministrationEncryptedPassword.cs" />
+    <Compile Include="Scripts\Tests\ViewerLayout_BR.cs" />
+    <Compile Include="Scripts\Tests\ReportPanel.cs" />
+    <Compile Include="Scripts\Tests\WorkFlow.cs" />
+    <Compile Include="Scripts\Tests\Z3D_All_Controls.cs" />
+    <Compile Include="Scripts\Tests\Z3D_All_Views.cs" />
+    <Compile Include="Scripts\Tests\Z3D_Dts.cs" />
+    <Compile Include="Scripts\UpgradeUtility\FileComparisonUtility.cs" />
+    <Compile Include="Service References\MergeReportService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="..\..\TestData\Sprint3Run\Administration.xls">
+      <Link>Administration.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\BasicTools.xls">
+      <Link>BasicTools.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\Browser.xls">
+      <Link>Browser.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\ConferenceLists.xls">
+      <Link>ConferenceLists.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\Configuration.xls">
+      <Link>Configuration.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\CustomizeToolbar.xls">
+      <Link>CustomizeToolbar.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\EnhancedStudyList.xls">
+      <Link>EnhancedStudyList.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\EnhancedThumbnail.xls">
+      <Link>EnhancedThumbnail.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\EnvironmentSetup.xls">
+      <Link>EnvironmentSetup.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\ExecutionList.xls">
+      <Link>ExecutionList.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\HistoryPanel.xls">
+      <Link>HistoryPanel.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\ImageSharing.xls">
+      <Link>ImageSharing.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\IntegratorDesktop.xls">
+      <Link>IntegratorDesktop.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\IPID.xls">
+      <Link>IPID.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\LinkedScrolling.xls">
+      <Link>Licensing.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\PasswordSecurity.xls">
+      <Link>PasswordSecurity.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\PatientComparisonStrategy.xls">
+      <Link>PatientComparisonStrategy.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\PDFReport.xls">
+      <Link>PDFReport.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\PriorSeries.xls">
+      <Link>PriorSeries.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\Reconciliation.xls">
+      <Link>Reconciliation.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\Sanity.xls">
+      <Link>Sanity.xls</Link>
+    </None>
+    <None Include="..\..\TestData\Sprint3Run\ViewerLayoutScope.xls">
+      <Link>ViewerLayoutScope.xls</Link>
+    </None>
+    <None Include="app.config" />
+    <None Include="OtherFiles\AccessFileShare.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\Prefetch.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\ReportTemplates\DetailedReport.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\ReportTemplates\logo_merge_healthcare.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\ReportTemplates\OverallReport.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\Instance_delete_DB.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\RunCMD.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\RunTestExecute.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\TenetTestModel_GroupDomainTable-1.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\TranslationTool.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\tshark.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\UninstalliConnectAccess.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\UninstallServiceTool.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\UpdateDatetime.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\XMLtshark.bat" />
+    <None Include="OtherFiles\Z3DConfigUpdate.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\Z3DInstall.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="ExecutableFiles\Regression_RunTest.pl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExecutableFiles\Sanity_RunTest.pl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="Service References\MergeReportService\MergeReportService.wsdl" />
+    <None Include="Service References\MergeReportService\Selenium.MergeReportService.SetAdditionalServerNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MergeReportService\Selenium.MergeReportService.SetBrowserNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MergeReportService\Selenium.MergeReportService.SetBuildResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MergeReportService\Selenium.MergeReportService.SetClientNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MergeReportService\Selenium.MergeReportService.SetEnvironmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MergeReportService\Selenium.MergeReportService.SetExecutionModeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MergeReportService\Selenium.MergeReportService.SetNetworkDomainResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MergeReportService\Selenium.MergeReportService.SetProjectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MergeReportService\Selenium.MergeReportService.SetServerNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MergeReportService\Selenium.MergeReportService.SetTestCaseDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MergeReportService\Selenium.MergeReportService.SetTestCaseExecutionDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MergeReportService\Selenium.MergeReportService.SetTestResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MergeReportService\Selenium.MergeReportService.SetTestSetExecutionStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MergeReportService\Selenium.MergeReportService.SetTestSetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MergeReportService\Selenium.MergeReportService.SetTestStepDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MergeReportService\Selenium.MergeReportService.SetTestStepExecutionDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MergeReportService\Selenium.MergeReportService.SetTimeZoneResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MergeReportService\Selenium.MergeReportService.StartResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MergeReportService\Selenium.MergeReportService.StopResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MergeReportService\Selenium.MergeReportService.TestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="tcCrExtension\gmhjclgpamdccpomoomknemhmmialaae\tcCrExtension.crx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tcCrExtension\gmhjclgpamdccpomoomknemhmmialaae\tcCrHost.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tcCrExtension\pnpbggiiikkjplldnkpkpkiajdnanpln\tcCrExtension.crx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tcCrExtension\pnpbggiiikkjplldnkpkpkiajdnanpln\tcCrHost.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="OtherFiles\gs927w32.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServerConfigFiles\ICA-7TST-1\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServerConfigFiles\ICA-DEV2-W12\BluRingLicense.xml" />
+    <Content Include="ServerConfigFiles\ICA-DEV2-W12\License.xml" />
+    <Content Include="ServerConfigFiles\ICA-INST1-W12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServerConfigFiles\ICA-INST1-W12\License.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServerConfigFiles\ICA-INST2-W12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServerConfigFiles\ICA-INST2-W12\License.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServerConfigFiles\ICA-S12-R3\BluRingLicense.xml" />
+    <Content Include="ServerConfigFiles\ICA-S12-R4\BluRingLicense.xml" />
+    <Content Include="ServerConfigFiles\ICA-TST4-WS12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServerConfigFiles\ICA-UNV001-W12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServerConfigFiles\ICA-UNV002-W12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServerConfigFiles\ICA-UNV003-W12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServerConfigFiles\ICA-UNV004-W12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServerConfigFiles\ICA-UNV005-W12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServerConfigFiles\ICA-UNV006-W12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServerConfigFiles\ICA-UNV007-W12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServerConfigFiles\ICA-UNV008-W12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServerConfigFiles\ICA-UNV009-W12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServerConfigFiles\ICA-UNV1-W16\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="TestCompleteComponents\TestCompleteVSIntegration\Project.pjs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCompleteComponents\TestCompleteVSIntegration\Project.pjs.tcLS">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCompleteComponents\TestCompleteVSIntegration\Project.tcCfgExtender">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCompleteComponents\TestCompleteVSIntegration\TestProject1\Events\Events.tcAX">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCompleteComponents\TestCompleteVSIntegration\TestProject1\KeywordTests\KeywordTests.tcKDT">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCompleteComponents\TestCompleteVSIntegration\TestProject1\Script\Script.tcScript">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCompleteComponents\TestCompleteVSIntegration\TestProject1\Script\Visualizer\ICAActionsXpath_js\ICAActionsXpath.js.tcVis">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCompleteComponents\TestCompleteVSIntegration\TestProject1\Script\Visualizer\Sample_js\Sample.js.tcVis">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCompleteComponents\TestCompleteVSIntegration\TestProject1\TestedApps\TestedApps.tcTAs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCompleteComponents\TestCompleteVSIntegration\TestProject1\TestProject1.mds">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCompleteComponents\TestCompleteVSIntegration\TestProject1\TestProject1.mds.tcLS">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\27844\27844_1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\27844\Pacs\27844_2">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV1-WS12\XdsConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV2-WS12\XdsConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV3-WS12\DataSourceManagerConfiguration\DataSourceManagerConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV3-WS12\ResourceConfiguration\ResourceConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV3-WS12\XdsConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV4-WS12\DataSourceManagerConfiguration\DataSourceManagerConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV4-WS12\ResourceConfiguration\ResourceConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV4-WS12\XdsConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV5-WS12\DataSourceManagerConfiguration\DataSourceManagerConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV5-WS12\ResourceConfiguration\ResourceConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV5-WS12\XdsConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV6-WS12\DataSourceManagerConfiguration\DataSourceManagerConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV6-WS12\ResourceConfiguration\ResourceConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV6-WS12\XdsConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV7-WS12\DataSourceManagerConfiguration\DataSourceManagerConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV7-WS12\ResourceConfiguration\ResourceConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV7-WS12\XdsConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV8-WS12\DataSourceManagerConfiguration\DataSourceManagerConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV8-WS12\ResourceConfiguration\ResourceConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV8-WS12\XdsConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV1-WS12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV2-WS12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV3-WS12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV4-WS12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV5-WS12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV6-WS12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV7-WS12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-SRV8-WS12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Run_Test.pl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161610\series 1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161610\series 2">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161610\series 3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161610\series 4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00002.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00003.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00004.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00005.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00006.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00007.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00008.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00009.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00010.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00011.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00012.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00013.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00014.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00015.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00016.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00017.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00018.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00019.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00020.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00021.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00022.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00023.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00024.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\CardioReport\1I00025.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\HL7 Report\F000001.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\HL7 Report\F000002.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\Structured Report\1I00026.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\Structured Report\1I00027.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Demographics\161614\Structured Report\1I00028.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\DICOMFilesForNewStudy\CR\CR.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\EmailStudy\164348\S1.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\ExamList\137309\DS1\ACC13730901">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\ExamList\137309\DS1\ACC13730902">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\ExamList\137309\DS1\ACC13730904">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\ExamList\137309\DS2\ACC13730903">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\ExamList\137312\ACC13731201">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\ExamList\145271\doc1.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\ExamList\145271\doc2.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\ExamList\145271\Doc3.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\ExamList\145271\S14_I14.demo">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\ExamList\145271\S17_I17.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\ExamList\145271\S18_I18.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\ExamList\145271\S19_I19.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\ExamList\145271\S20_I20.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\ExamList\145271\S21_I21.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Prefetch\164598\164598.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Prefetch\164656\lossless\lossless.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Prefetch\164656\lossless\lossless2.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Prefetch\164656\lossy\lossy.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Prefetch\66144\Fifth\66144_5.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Prefetch\66144\First\66144_1.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Prefetch\66144\Fourth\66144_4.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Prefetch\66144\Second\66144_2.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Prefetch\66144\Third\66144_3.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Prefetch\66145\First\66145_1.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Prefetch\66145\Second\66145_2.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Prefetch\66145\Third\66145_3.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Prefetch\66147\66147.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Prefetch\66149\First\cache,first image.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Prefetch\66149\Second\cache,second image.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\140794\S000001\F000001">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\140794\S000001\F000002">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\140794\S000001\F000003">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\140794\S000001\F000004">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\140794\S000001\F000005">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\140794\S000002\F000001">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\140794\S000002\F000002">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\140794\S000002\F000003">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\140794\S000002\F000004">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\140794\S000002\F000005">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\141865\S000001\F000001">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\141865\S000001\F000002">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\141865\S000001\F000003">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\141865\S000001\F000004">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\141865\S000001\F000005">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\141865\S000002\F000001">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\141865\S000002\F000002">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\141865\S000002\F000003">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\141865\S000002\F000004">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\142151\S000001\F000001">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\142151\S000001\F000002">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\142151\S000001\F000003">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\142151\S000001\F000004">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\142151\S000001\F000005">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\142151\S000001\F000006">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\142151\S000002\F000001">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\142151\S000002\F000002">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\142151\S000002\F000003">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PresentaionStateHandling\142151\S000002\F000004">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000001">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000002">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000003">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000004">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000005">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000006">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000007">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000008">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000009">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000010">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000011">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000012">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000013">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000014">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000015">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000016">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000017">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000018">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000019">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000020">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000021">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000022">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000023">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000024">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000025">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000026">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000027">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000028">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000029">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000030">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000031">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000032">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000033">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000034">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000035">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000036">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000037">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000038">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000039">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000040">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000041">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000042">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000043">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000044">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000045">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000046">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000047">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000048">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000049">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000050">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000051">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000052">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000053">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000054">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000055">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000056">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000057">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000058">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000059">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000060">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000061">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000062">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000063">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000064">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000065">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000066">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000067">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000068">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000069">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000070">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000071">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000072">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000073">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000074">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000075">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000076">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000077">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000078">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000079">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000080">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000081">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000082">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000083">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000084">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000085">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000086">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000087">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000088">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000089">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000090">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000091">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000092">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000093">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000094">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000095">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000096">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000097">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000098">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000099">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000100">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000101">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000102">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000103">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000104">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000105">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000106">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000107">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000108">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000109">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000110">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000111">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000112">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000113">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000114">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000115">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000116">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000117">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000118">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000119">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000120">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000121">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000122">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000123">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000124">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000125">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000126">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000127">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000128">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000129">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000130">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000131">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000132">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000133">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000134">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000135">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000136">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000137">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000138">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000139">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT1\F000140">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000001">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000002">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000003">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000004">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000005">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000006">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000007">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000008">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000009">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000010">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000011">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000012">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000013">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000014">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000015">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000016">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000017">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000018">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000019">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000020">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000021">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000022">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000023">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000024">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000025">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000026">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000027">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000028">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000029">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000030">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000031">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000032">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000033">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000034">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000035">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000036">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000037">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000038">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000039">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000040">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000041">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000042">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000043">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000044">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000045">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000046">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000047">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000048">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000049">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000050">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000051">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000052">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000053">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000054">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000055">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000056">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000057">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000058">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000059">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000060">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000061">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000062">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000063">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000064">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000065">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000066">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000067">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000068">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000069">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000070">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000071">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000072">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000073">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000074">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000075">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000076">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000077">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000078">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000079">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000080">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000081">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000082">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000083">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000084">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000085">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000086">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000087">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000088">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000089">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000090">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000091">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000092">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000093">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000094">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000095">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000096">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000097">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000098">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000099">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000100">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000101">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000102">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000103">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000104">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000105">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000106">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000107">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000108">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000109">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000110">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000111">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000112">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000113">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000114">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000115">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000116">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000117">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000118">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000119">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000120">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000121">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000122">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000123">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000124">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000125">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000126">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000127">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000128">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000129">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000130">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000131">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000132">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000133">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000134">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000135">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000136">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000137">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000138">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000139">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\CT2\F000140">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\PreProcessing\140886\MR\F000001">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\ReportPanel\138745\DicomData\F000001" />
+    <None Include="TestData\ReportPanel\138745\DicomData\F000002" />
+    <None Include="TestData\ReportPanel\138745\DicomData\F000003" />
+    <None Include="TestData\ReportPanel\138745\DicomData\F000004" />
+    <None Include="TestData\ReportPanel\138746\DICOM\F000001" />
+    <None Include="TestData\ReportPanel\138746\DICOM\F000002" />
+    <None Include="TestData\ReportPanel\138746\DICOM\F000003" />
+    <None Include="TestData\ReportPanel\138746\DICOM\F000004" />
+    <None Include="TestData\ReportPanel\138747\DICOM\F000001" />
+    <None Include="TestData\ReportPanel\138747\DICOM\F000002" />
+    <None Include="TestData\ReportPanel\138747\DICOM\F000003" />
+    <None Include="TestData\ReportPanel\138747\DICOM\F000004" />
+    <None Include="TestData\ReportPanel\138748\DicomData\138748_1.dcm" />
+    <None Include="TestData\ReportPanel\138748\DicomData\138748_2.dcm" />
+    <None Include="TestData\ReportPanel\138748\DicomData\138748_3.dcm" />
+    <None Include="TestData\ReportPanel\138748\DicomData\138748_4.dcm" />
+    <None Include="TestData\ReportPanel\138748\DicomData\138748_5.dcm" />
+    <None Include="TestData\ReportPanel\138749\DicomData\F000001" />
+    <None Include="TestData\ReportPanel\138749\DicomData\F000002" />
+    <None Include="TestData\ReportPanel\138749\DicomData\F000003" />
+    <None Include="TestData\ReportPanel\138750\DicomData\138750_1.dcm" />
+    <None Include="TestData\ReportPanel\138750\DicomData\138750_2.dcm" />
+    <None Include="TestData\ReportPanel\138750\DicomData\138750_3.dcm" />
+    <None Include="TestData\ReportPanel\138750\DicomData\138750_4.dcm" />
+    <None Include="TestData\ReportPanel\138750\DicomData\138750_5.dcm" />
+    <None Include="TestData\ReportPanel\138751\DicomData\138751_1.dcm" />
+    <None Include="TestData\ReportPanel\138751\DicomData\138751_2.dcm" />
+    <None Include="TestData\ReportPanel\138751\DicomData\138751_3.dcm" />
+    <None Include="TestData\ReportPanel\138751\DicomData\138751_4.dcm" />
+    <None Include="TestData\ReportPanel\138751\DicomData\138751_5.dcm" />
+    <None Include="TestData\ReportPanel\138752\DicomData\138752_1.dcm" />
+    <None Include="TestData\ReportPanel\138752\DicomData\138752_2.dcm" />
+    <None Include="TestData\ReportPanel\138752\DicomData\138752_3.dcm" />
+    <None Include="TestData\ReportPanel\138752\DicomData\138752_4.dcm" />
+    <None Include="TestData\ReportPanel\138752\DicomData\138752_5.dcm" />
+    <None Include="TestData\Thumbnails\161049\S000001\F000001">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\Thumbnails\161049\S000002\F000001">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestEHRfiles\TestEHR.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestEHRfiles\TestEHR.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestEHRfiles\TestEHR.pdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestEHRfiles\TestEHR.samlPolicy.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestEHRfiles\SystemFactoryConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestEHRfiles\ServiceFactoryConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\RDMVP\28031\28031.dcm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\DB_delete.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestWadoFiles\WadoWSTestClient.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\TestData\Sprint3Run\Automation_Config.xml">
+      <Link>Automation_Config.xml</Link>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="..\..\TestData\Sprint3Run\Automation_Config_Dev.xml">
+      <Link>Automation_Config_Dev.xml</Link>
+    </Content>
+    <Content Include="big_logo.ico" />
+    <Content Include="DicomDlls\Dicom.dll" />
+    <Content Include="filedownload.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="OtherFiles\Simulate\bililiteRange.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\Simulate\jquery.simulate.drag-n-drop.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\Simulate\jquery.simulate.ext.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\Simulate\jquery.simulate.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\Simulate\jquery.simulate.key-combo.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\Simulate\jquery.simulate.key-sequence.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\Localization_Complete.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OtherFiles\Localization_Prepare.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="OtherFiles\PsExec.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="OtherFiles\TranslationTool.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\WebDriver.GeckoDriver.0.19.0\content\geckodriver.exe" />
+    <Content Include="packages\WebDriver.GeckoDriver.0.19.0\content\geckodriver.exe" />
+    <Content Include="RanorexDlls\Ranorex.Controls.dll" />
+    <Content Include="RanorexDlls\Ranorex.Core.dll" />
+    <Content Include="RanorexDlls\Ranorex.Core.Injector.dll" />
+    <Content Include="RanorexDlls\Ranorex.Core.WinApi.dll" />
+    <Content Include="RanorexDlls\Ranorex.Libs.dll" />
+    <Content Include="RanorexDlls\Ranorex.Libs.IeAddon3.dll" />
+    <Content Include="RanorexDlls\Ranorex.Libs.WinForms.dll" />
+    <Content Include="RanorexDlls\Ranorex.Plugin.ChromeWeb.dll" />
+    <Content Include="RanorexDlls\Ranorex.Plugin.Flex.dll" />
+    <Content Include="RanorexDlls\Ranorex.Plugin.Java.dll" />
+    <Content Include="RanorexDlls\Ranorex.Plugin.Mobile.dll" />
+    <Content Include="RanorexDlls\Ranorex.Plugin.MozillaWeb.dll" />
+    <Content Include="RanorexDlls\Ranorex.Plugin.Msaa.dll" />
+    <Content Include="RanorexDlls\Ranorex.Plugin.Office.dll" />
+    <Content Include="RanorexDlls\Ranorex.Plugin.Qt.dll" />
+    <Content Include="RanorexDlls\Ranorex.Plugin.RawText.dll" />
+    <Content Include="RanorexDlls\Ranorex.Plugin.Sap.dll" />
+    <Content Include="RanorexDlls\Ranorex.Plugin.Uia.dll" />
+    <Content Include="RanorexDlls\Ranorex.Plugin.Web.dll" />
+    <Content Include="RanorexDlls\Ranorex.Plugin.Win32.dll" />
+    <Content Include="RanorexDlls\Ranorex.Plugin.WinForms.dll" />
+    <Content Include="RanorexDlls\Ranorex.Plugin.Wpf.dll" />
+    <Content Include="RanorexDlls\Ranorex.Plugin.WpfProxy.dll" />
+    <None Include="TestCompleteComponents\TestCompleteVSIntegration\TestProject1\ScriptExtensions\JSFiles\Description.XML">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCompleteComponents\TestCompleteVSIntegration\TestProject1\ScriptExtensions\JSFiles\Logger.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCompleteComponents\TestCompleteVSIntegration\TestProject1\ScriptExtensions\JSFiles\WindowUtils.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tcCrExtension\pnpbggiiikkjplldnkpkpkiajdnanpln\nptcCrBrowserAgent.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tcCrExtension\pnpbggiiikkjplldnkpkpkiajdnanpln\nptcCrTabsAgent.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tcCrExtension\pnpbggiiikkjplldnkpkpkiajdnanpln\tcCrHost.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCompleteComponents\Interop.TestComplete.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCompleteComponents\TestCompleteVSIntegration\TestProject1\Script\GenericUtils.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Scripts\JSFiles\FetchReportData.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Scripts\JSFiles\FetchMergePortReportData.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="ExecutableFiles\blat.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExecutableFiles\bodymsg.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExecutableFiles\EmailDetails.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExecutableFiles\OverallResult.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExecutableFiles\SanityEmailDetails.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExecutableFiles\SuiteResult.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\JSFiles\FetchCardioReportData.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\JSFiles\FetchUnityPACSReportData.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\UpgradeUtility\Araxis\Interop.Merge70.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\UpgradeUtility\IgnoredFilesList.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\UpgradeUtility\IgnoredTablesList.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="ServerConfigFiles\BR-EXE0-W12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-EXE6-W12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-EXE7-W12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-EXE8-W12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\BR-EXE9-W12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="ServerConfigFiles\BR-PQA-WS12-6\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServerConfigFiles\BR-PQA-WS12-6\PreReleaseLicense\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServerConfigFiles\BR-PQA-WS12-6\XdsConfiguration.xml" />
+    <Content Include="ServerConfigFiles\BR-SRV7-WS12\PreReleaseLicense\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServerConfigFiles\BR-SRV9-WS12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="ServerConfigFiles\ICA-SAN3-W12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="ServerConfigFiles\ICA-SRV-W2K12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServerConfigFiles\ICA-SRV-W2K12\PreReleaseLicense\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="ServerConfigFiles\ICA-UNV1-W12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\ICA-UNV2-W12\BluRingLicense.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Service References\MergeReportService\MergeReportService.disco" />
+    <None Include="Service References\MergeReportService\configuration91.svcinfo" />
+    <None Include="Service References\MergeReportService\configuration.svcinfo" />
+    <None Include="Service References\MergeReportService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="tcCrExtension\gmhjclgpamdccpomoomknemhmmialaae\nptcCrBrowserAgent.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tcCrExtension\gmhjclgpamdccpomoomknemhmmialaae\nptcCrTabsAgent.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tcCrExtension\gmhjclgpamdccpomoomknemhmmialaae\tcCrHost.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerConfigFiles\ICA-UNV1-W16\License.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="TestCompleteComponents\TestCompleteVSIntegration\TestProject1\Script\ICAActionsCommandLine.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestCompleteComponents\TestCompleteVSIntegration\TestProject1\Script\ICAActionsXpath.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\EmailStudy\164354\ibm-8bar-login%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\EmailStudy\164354\ica-name-login%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\ReportPanel\138745\HL7Order\28501_40005_1004079_ORU_Acc123only.txt" />
+    <Content Include="TestData\ReportPanel\138745\HL7Order\28501_40005_1004079_ORU_Acc456only.txt" />
+    <Content Include="TestData\ReportPanel\138746\HL7Order\Acc123PID.txt" />
+    <Content Include="TestData\ReportPanel\138746\HL7Order\Acc456PID.txt" />
+    <Content Include="TestData\ReportPanel\138746\HL7Order\Acc789PID.txt" />
+    <Content Include="TestData\ReportPanel\138747\HL7Order\Acc111IPID.txt" />
+    <Content Include="TestData\ReportPanel\138747\HL7Order\Acc444IPID.txt" />
+    <Content Include="TestData\ReportPanel\138747\HL7Order\Acc777IPID.txt" />
+    <Content Include="TestData\ReportPanel\138748\HL7Order\28501_40005_1004079_ORU_KANN100Comb.txt" />
+    <Content Include="TestData\ReportPanel\138748\HL7Order\28501_40005_1004079_ORU_KANN101Comb.txt" />
+    <Content Include="TestData\ReportPanel\138748\HL7Order\28501_40005_1004079_ORU_KANN104Comb.txt" />
+    <Content Include="TestData\ReportPanel\138749\HL7Order\28501_40005_1004079_ORU_UID123only.txt" />
+    <Content Include="TestData\ReportPanel\138749\HL7Order\28501_40005_1004079_ORU_UID456only.txt" />
+    <Content Include="TestData\ReportPanel\138750\HL7Order\28501_40005_1004079_ORU_UID123PID.txt" />
+    <Content Include="TestData\ReportPanel\138750\HL7Order\28501_40005_1004079_ORU_UID258PID.txt" />
+    <Content Include="TestData\ReportPanel\138750\HL7Order\28501_40005_1004079_ORU_UID456PID.txt" />
+    <Content Include="TestData\ReportPanel\138751\HL7Order\28501_40005_1004079_ORU_UID123IPID.txt" />
+    <Content Include="TestData\ReportPanel\138751\HL7Order\28501_40005_1004079_ORU_UID258IPID.txt" />
+    <Content Include="TestData\ReportPanel\138751\HL7Order\28501_40005_1004079_ORU_UID456IPID.txt" />
+    <Content Include="TestData\ReportPanel\138752\HL7Order\28501_40005_1004079_ORU_UID123Comb.txt" />
+    <Content Include="TestData\ReportPanel\138752\HL7Order\28501_40005_1004079_ORU_UID258Comb.txt" />
+    <Content Include="TestData\ReportPanel\138752\HL7Order\28501_40005_1004079_ORU_UID456Comb.txt" />
+    <Content Include="TestEHRfiles\PostFormTemplate.html" />
+    <Content Include="TestEHRfiles\samlAssertion.xml" />
+    <Content Include="TestEHRfiles\samlAssertion2.xml" />
+    <Content Include="TestWadoFiles\WadoWSTestClient.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="TestData\IntegratorDesktop\91853\Logout.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\IntegratorDesktop\91853\MergeLoginLogo.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\IntegratorDesktop\91853\WebAccessLoginLogo.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="TestData\Prefetch\66149\Demographics\Demographics.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="LCC11">
+      <Guid>{EDCD5812-6A06-43C3-AFAC-46EF5D14E22C}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TestData\PreProcessing\140749\DS1\" />
+    <Folder Include="TestData\PreProcessing\140749\DS2\" />
+    <Folder Include="TestData\PreProcessing\140749\DS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\MergeReportService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\packages\Selenium.WebDriver.ChromeDriver.2.24.0.0\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\..\packages\Selenium.WebDriver.ChromeDriver.2.24.0.0\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <Import Project="..\..\..\..\..\AppData\Roaming\NuGet\packages\Selenium.WebDriver.ChromeDriver.2.29.0\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\..\..\..\..\AppData\Roaming\NuGet\packages\Selenium.WebDriver.ChromeDriver.2.28.0\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <Import Project="..\..\..\..\..\AppData\Roaming\NuGet\packages\Selenium.WebDriver.IEDriver.3.3.0\build\Selenium.WebDriver.IEDriver.targets" Condition="Exists('..\..\..\..\..\AppData\Roaming\NuGet\packages\Selenium.WebDriver.IEDriver.3.3.0\build\Selenium.WebDriver.IEDriver.targets')" />
+  <Import Project="packages\Selenium.WebDriver.ChromeDriver.2.25.0.8\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('packages\Selenium.WebDriver.ChromeDriver.2.25.0.8\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <Import Project="packages\Selenium.WebDriver.IEDriver.3.5.1\build\Selenium.WebDriver.IEDriver.targets" Condition="Exists('packages\Selenium.WebDriver.IEDriver.3.5.1\build\Selenium.WebDriver.IEDriver.targets')" />
+  <Import Project="packages\Selenium.WebDriver.ChromeDriver.2.33.0\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('packages\Selenium.WebDriver.ChromeDriver.2.33.0\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <PropertyGroup>
+    <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+  </PropertyGroup>
+  <Import Project="packages\Selenium.Chrome.WebDriver.2.38\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('packages\Selenium.Chrome.WebDriver.2.38\build\Selenium.Chrome.WebDriver.targets')" />
+  <Import Project="packages\Selenium.Chrome.WebDriver.2.43\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('packages\Selenium.Chrome.WebDriver.2.43\build\Selenium.Chrome.WebDriver.targets')" />
+  <Import Project="packages\Selenium.WebDriver.IEDriver.3.7.0\build\Selenium.WebDriver.IEDriver.targets" Condition="Exists('packages\Selenium.WebDriver.IEDriver.3.7.0\build\Selenium.WebDriver.IEDriver.targets')" />
+  <Import Project="packages\Accord.3.8.0\build\Accord.targets" Condition="Exists('packages\Accord.3.8.0\build\Accord.targets')" />
+  <Import Project="packages\Selenium.Chrome.WebDriver.2.43\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('packages\Selenium.Chrome.WebDriver.2.43\build\Selenium.Chrome.WebDriver.targets')" />
+  <Import Project="packages\Selenium.Firefox.WebDriver.0.22.0\build\Selenium.Firefox.WebDriver.targets" Condition="Exists('packages\Selenium.Firefox.WebDriver.0.22.0\build\Selenium.Firefox.WebDriver.targets')" />
+  <Import Project="packages\Selenium.InternetExplorer.WebDriver.3.14\build\Selenium.InternetExplorer.WebDriver.targets" Condition="Exists('packages\Selenium.InternetExplorer.WebDriver.3.14\build\Selenium.InternetExplorer.WebDriver.targets')" />
+  <Import Project="packages\Selenium.WebDriver.IEDriver.3.14.0\build\Selenium.WebDriver.IEDriver.targets" Condition="Exists('packages\Selenium.WebDriver.IEDriver.3.14.0\build\Selenium.WebDriver.IEDriver.targets')" />
+  <Import Project="packages\Selenium.InternetExplorer.WebDriver.3.12\build\Selenium.InternetExplorer.WebDriver.targets" Condition="Exists('packages\Selenium.InternetExplorer.WebDriver.3.12\build\Selenium.InternetExplorer.WebDriver.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Accord.3.8.0\build\Accord.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Accord.3.8.0\build\Accord.targets'))" />
+    <Error Condition="!Exists('packages\PdfiumViewer.Native.x86.v8-xfa.2018.4.8.256\build\PdfiumViewer.Native.x86.v8-xfa.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\PdfiumViewer.Native.x86.v8-xfa.2018.4.8.256\build\PdfiumViewer.Native.x86.v8-xfa.props'))" />
+    <Error Condition="!Exists('packages\Selenium.WebDriver.GeckoDriver.Win64.0.23.0\build\Selenium.WebDriver.GeckoDriver.Win64.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Selenium.WebDriver.GeckoDriver.Win64.0.23.0\build\Selenium.WebDriver.GeckoDriver.Win64.targets'))" />
+    <Error Condition="!Exists('packages\Selenium.WebDriver.ChromeDriver.72.0.3626.69\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Selenium.WebDriver.ChromeDriver.72.0.3626.69\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+  </Target>
+  <Import Project="packages\Selenium.WebDriver.GeckoDriver.Win64.0.23.0\build\Selenium.WebDriver.GeckoDriver.Win64.targets" Condition="Exists('packages\Selenium.WebDriver.GeckoDriver.Win64.0.23.0\build\Selenium.WebDriver.GeckoDriver.Win64.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <!-- <Error Condition="!Exists('packages\Selenium.WebDriver.ChromeDriver.74.0.3729.6\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Selenium.WebDriver.ChromeDriver.74.0.3729.6\build\Selenium.WebDriver.ChromeDriver.targets'))" /> -->
+  </Target>
+  <ItemGroup>
+    <Content Include="packages\WebDriver.IEDriverServer.win32.3.141.0\content\IEDriverServer.exe">
+      <Link>IEDriverServer.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="packages\Selenium.WebDriver.ChromeDriver.72.0.3626.69\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('packages\Selenium.WebDriver.ChromeDriver.72.0.3626.69\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

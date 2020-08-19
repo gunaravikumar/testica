@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<factory>
+    <map>
+        <add key="Sts.Authentication.User" assembly="OpenContent.Platform.Core.dll" class="OpenContent.Core.Security.Services.SamlAuthenticationStsProxy" >
+            <parameter name="url" class="string" value="http://localhost:12002/WebAccessAuthenticationSTS/SamlTokenIssuer.ashx" />
+            <parameter name="policy" class="string" value="AuthenticationIssuerClientPolicy" />
+            <parameter name="target" class="string" value="urn:cedara:opencontent:goldengate:samlsts:authorization" />
+        </add>
+        <add key="Sts.Authorization.User" assembly="OpenContent.Platform.Core.dll" class="OpenContent.Core.Security.Services.SamlAuthorizationStsProxy" >
+            <parameter name="url" class="string" value="http://localhost:12003/WebAccessAuthorizationSTS/SamlTokenIssuer.ashx" />
+            <parameter name="policy" class="string" value="AuthorizationIssuerClientPolicy" />
+            <parameter name="target" class="string" value="urn:cedara:opencontent:goldengate:services:all" />
+        </add>
+        <add key="Sts.Renewal.User" assembly="OpenContent.Platform.Core.dll" class="OpenContent.Core.Security.Services.SamlTokenRenewalStsProxy" >
+            <parameter name="url" class="string" value="http://localhost:12002/WebAccessAuthenticationSTS/SamlTokenRenewal.ashx" />
+            <parameter name="policy" class="string" value="TokenRenewalClientPolicy" />
+        </add>
+        <add key="Sts.Authentication.Guest" assembly="OpenContent.Platform.Core.dll" class="OpenContent.Core.Security.Services.SamlAuthenticationStsProxy" >
+            <parameter name="url" class="string" value="http://localhost:12004/WebAccessGuestAuthenticationSTS/SamlTokenIssuer.ashx" />
+            <parameter name="policy" class="string" value="GuestAuthenticationIssuerClientPolicy" />
+            <parameter name="target" class="string" value="urn:cedara:opencontent:goldengate:samlsts:authorization" />
+        </add>
+        <add key="Sts.Authorization.Guest" assembly="OpenContent.Platform.Core.dll" class="OpenContent.Core.Security.Services.SamlAuthorizationStsProxy" >
+            <parameter name="url" class="string" value="http://localhost:12005/WebAccessGuestAuthorizationSTS/SamlTokenIssuer.ashx" />
+            <parameter name="policy" class="string" value="GuestAuthorizationIssuerClientPolicy" />
+            <parameter name="target" class="string" value="urn:cedara:opencontent:goldengate:services:all" />
+        </add>
+        <add key="Sts.Renewal.Guest" assembly="OpenContent.Platform.Core.dll" class="OpenContent.Core.Security.Services.SamlTokenRenewalStsProxy" >
+            <parameter name="url" class="string" value="http://localhost:12004/WebAccessGuestAuthenticationSTS/SamlTokenRenewal.ashx" />
+            <parameter name="policy" class="string" value="GuestTokenRenewalClientPolicy" />
+        </add>
+        <add key="Sts.Authentication.Integrator" assembly="OpenContent.Platform.Core.dll" class="OpenContent.Core.Security.Services.SamlAuthenticationStsProxy" >
+            <parameter name="url" class="string" value="http://localhost:12006/IntegratorAuthenticationSTS/SamlTokenIssuer.ashx" />
+            <parameter name="policy" class="string" value="IntegratorAuthenticationIssuerClientPolicy" />
+            <parameter name="target" class="string" value="urn:cedara:opencontent:goldengate:samlsts:authorization" />
+        </add>
+        <add key="Sts.Authorization.Integrator" assembly="OpenContent.Platform.Core.dll" class="OpenContent.Core.Security.Services.SamlAuthorizationStsProxy" >
+            <parameter name="url" class="string" value="http://localhost:12007/IntegratorAuthorizationSTS/SamlTokenIssuer.ashx" />
+            <parameter name="policy" class="string" value="IntegratorAuthorizationIssuerClientPolicy" />
+            <parameter name="target" class="string" value="urn:cedara:opencontent:goldengate:services:all" />
+        </add>
+        <add key="Security.Password" assembly="OpenContent.Platform.Core.dll" class="OpenContent.Core.Security.Services.PasswordSecurityMD5" >
+        </add>
+        <add key="Security.Password.Local" assembly="OpenContent.Platform.Core.dll" class="OpenContent.Core.Security.Services.PasswordSecurityMD5" >
+        </add>
+    </map>
+</factory>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<license_set>
+<feature_set>
+
+<feature name="webaccess.base" version="1.0" >
+<!-- start date  6/6/2019 10:50:55 AM -->
+<!-- expiry date 9/14/2019 10:50:55 AM -->
+<!-- duration    100[days] -->
+<!-- licenses    0 -->
+<!-- Host Name    ICA-INST1-W12 -->
+<!-- IP Address    -->
+<!-- MAC Address  00-50-56-B9-94-8E -->
+<!-- Server Code   -->
+<!-- Using ID     Mac Address -->
+
+<key><![CDATA[6b5xxfxf6=ggjsn8suchxp+n=z44n//2=z/npa2x]]></key>
+
+</feature>
+
+<feature name="webaccess.admin" version="1.0" >
+<!-- start date  6/6/2019 10:50:55 AM -->
+<!-- expiry date 9/14/2019 10:50:55 AM -->
+<!-- duration    100[days] -->
+<!-- licenses    1 -->
+<!-- Host Name    ICA-INST1-W12 -->
+<!-- IP Address    -->
+<!-- MAC Address  00-50-56-B9-94-8E -->
+<!-- Server Code   -->
+<!-- Using ID     Mac Address -->
+
+<key><![CDATA[-b3jjajah<vveyqgy/x77b4-q<d..qffud>sr/4buj]]></key>
+
+</feature>
+
+<feature name="webaccess.maxusers" version="2.0" >
+<!-- start date  6/6/2019 10:50:55 AM -->
+<!-- expiry date 9/14/2019 10:50:55 AM -->
+<!-- duration    100[days] -->
+<!-- licenses    20 -->
+<!-- Host Name    ICA-INST1-W12 -->
+<!-- IP Address    -->
+<!-- MAC Address  00-50-56-B9-94-8E -->
+<!-- Server Code   -->
+<!-- Using ID     Mac Address -->
+
+<key><![CDATA[e59..k.k6n<<wx+sxct--2qg+n>88+uum=>a4u+euq7m.]]></key>
+
+</feature>
+
+<feature name="webaccess.3d" version="1.0" >
+<!-- start date  6/6/2019 10:50:55 AM -->
+<!-- expiry date 9/14/2019 10:50:55 AM -->
+<!-- duration    100[days] -->
+<!-- licenses    10 -->
+<!-- Host Name    ICA-INST1-W12 -->
+<!-- IP Address    -->
+<!-- MAC Address  00-50-56-B9-94-8E -->
+<!-- Server Code   -->
+<!-- Using ID     Mac Address -->
+
+<key><![CDATA[478uususya++kf.>fi6mmgd2.agvv.hhqwndxqu]]></key>
+
+</feature>
+
+</feature_set>
+
+</license_set>

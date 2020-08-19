@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Test">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strRequest" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Start">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLogDirectory" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StartResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Stop">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StopResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="StopResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetTimeZone">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strZoneID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetTimeZoneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetTimeZoneResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetEnvironment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetEnvironmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetEnvironmentResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetTestResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetTestResultResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetTestResultResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetTestSetExecutionStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetTestSetExecutionStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetTestSetExecutionStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetTestCaseDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTestCaseID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTestCaseDescription" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetTestCaseDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetTestCaseDetailsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetTestCaseExecutionDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDuration" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intTestDataID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTestData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetTestCaseExecutionDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetTestCaseExecutionDetailsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetTestStepDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTestStepDescription" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExpectedResult" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intStepID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetTestStepDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetTestStepDetailsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetTestStepExecutionDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strComment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strScreenshot" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTestImage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGoldImage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDiffImage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetTestStepExecutionDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetTestStepExecutionDetailsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetProject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProjectName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetProjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetProjectResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetBuild">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBuildNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetBuildResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetBuildResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetNetworkDomain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDomainName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetNetworkDomainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetNetworkDomainResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetServerName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strServerName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetServerNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetServerNameResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetClientName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strClientName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetClientNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetClientNameResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetBrowserName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBrowserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBrowserVersion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetBrowserNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetBrowserNameResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAdditionalServerName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAdditionalNames" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAdditionalServerNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetAdditionalServerNameResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetExecutionMode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExecutionMode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetExecutionModeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetExecutionModeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetTestSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTestSetName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTag" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetTestSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetTestSetResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="TestSoapIn">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="TestSoapOut">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
+  <wsdl:message name="StartSoapIn">
+    <wsdl:part name="parameters" element="tns:Start" />
+  </wsdl:message>
+  <wsdl:message name="StartSoapOut">
+    <wsdl:part name="parameters" element="tns:StartResponse" />
+  </wsdl:message>
+  <wsdl:message name="StopSoapIn">
+    <wsdl:part name="parameters" element="tns:Stop" />
+  </wsdl:message>
+  <wsdl:message name="StopSoapOut">
+    <wsdl:part name="parameters" element="tns:StopResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetTimeZoneSoapIn">
+    <wsdl:part name="parameters" element="tns:SetTimeZone" />
+  </wsdl:message>
+  <wsdl:message name="SetTimeZoneSoapOut">
+    <wsdl:part name="parameters" element="tns:SetTimeZoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetEnvironmentSoapIn">
+    <wsdl:part name="parameters" element="tns:SetEnvironment" />
+  </wsdl:message>
+  <wsdl:message name="SetEnvironmentSoapOut">
+    <wsdl:part name="parameters" element="tns:SetEnvironmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetTestResultSoapIn">
+    <wsdl:part name="parameters" element="tns:SetTestResult" />
+  </wsdl:message>
+  <wsdl:message name="SetTestResultSoapOut">
+    <wsdl:part name="parameters" element="tns:SetTestResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetTestSetExecutionStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:SetTestSetExecutionStatus" />
+  </wsdl:message>
+  <wsdl:message name="SetTestSetExecutionStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:SetTestSetExecutionStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetTestCaseDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:SetTestCaseDetails" />
+  </wsdl:message>
+  <wsdl:message name="SetTestCaseDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:SetTestCaseDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetTestCaseExecutionDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:SetTestCaseExecutionDetails" />
+  </wsdl:message>
+  <wsdl:message name="SetTestCaseExecutionDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:SetTestCaseExecutionDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetTestStepDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:SetTestStepDetails" />
+  </wsdl:message>
+  <wsdl:message name="SetTestStepDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:SetTestStepDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetTestStepExecutionDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:SetTestStepExecutionDetails" />
+  </wsdl:message>
+  <wsdl:message name="SetTestStepExecutionDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:SetTestStepExecutionDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetProjectSoapIn">
+    <wsdl:part name="parameters" element="tns:SetProject" />
+  </wsdl:message>
+  <wsdl:message name="SetProjectSoapOut">
+    <wsdl:part name="parameters" element="tns:SetProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetBuildSoapIn">
+    <wsdl:part name="parameters" element="tns:SetBuild" />
+  </wsdl:message>
+  <wsdl:message name="SetBuildSoapOut">
+    <wsdl:part name="parameters" element="tns:SetBuildResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetNetworkDomainSoapIn">
+    <wsdl:part name="parameters" element="tns:SetNetworkDomain" />
+  </wsdl:message>
+  <wsdl:message name="SetNetworkDomainSoapOut">
+    <wsdl:part name="parameters" element="tns:SetNetworkDomainResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetServerNameSoapIn">
+    <wsdl:part name="parameters" element="tns:SetServerName" />
+  </wsdl:message>
+  <wsdl:message name="SetServerNameSoapOut">
+    <wsdl:part name="parameters" element="tns:SetServerNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetClientNameSoapIn">
+    <wsdl:part name="parameters" element="tns:SetClientName" />
+  </wsdl:message>
+  <wsdl:message name="SetClientNameSoapOut">
+    <wsdl:part name="parameters" element="tns:SetClientNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetBrowserNameSoapIn">
+    <wsdl:part name="parameters" element="tns:SetBrowserName" />
+  </wsdl:message>
+  <wsdl:message name="SetBrowserNameSoapOut">
+    <wsdl:part name="parameters" element="tns:SetBrowserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAdditionalServerNameSoapIn">
+    <wsdl:part name="parameters" element="tns:SetAdditionalServerName" />
+  </wsdl:message>
+  <wsdl:message name="SetAdditionalServerNameSoapOut">
+    <wsdl:part name="parameters" element="tns:SetAdditionalServerNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetExecutionModeSoapIn">
+    <wsdl:part name="parameters" element="tns:SetExecutionMode" />
+  </wsdl:message>
+  <wsdl:message name="SetExecutionModeSoapOut">
+    <wsdl:part name="parameters" element="tns:SetExecutionModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetTestSetSoapIn">
+    <wsdl:part name="parameters" element="tns:SetTestSet" />
+  </wsdl:message>
+  <wsdl:message name="SetTestSetSoapOut">
+    <wsdl:part name="parameters" element="tns:SetTestSetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MergeReportServiceSoap">
+    <wsdl:operation name="Test">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Test web method to check MergeReport web service accessibility</wsdl:documentation>
+      <wsdl:input message="tns:TestSoapIn" />
+      <wsdl:output message="tns:TestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Start">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web method to intiate WebService instance for saving execution results to automation DB</wsdl:documentation>
+      <wsdl:input message="tns:StartSoapIn" />
+      <wsdl:output message="tns:StartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Stop">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web method to stop/close WebService instance post saving execution results to automation DB</wsdl:documentation>
+      <wsdl:input message="tns:StopSoapIn" />
+      <wsdl:output message="tns:StopSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetTimeZone">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web method to set TimeZone for which the execution results will be saved</wsdl:documentation>
+      <wsdl:input message="tns:SetTimeZoneSoapIn" />
+      <wsdl:output message="tns:SetTimeZoneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEnvironment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web method to save execution environment details to MergeReport DB</wsdl:documentation>
+      <wsdl:input message="tns:SetEnvironmentSoapIn" />
+      <wsdl:output message="tns:SetEnvironmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetTestResult">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web method to save test result details to MergeReport DB</wsdl:documentation>
+      <wsdl:input message="tns:SetTestResultSoapIn" />
+      <wsdl:output message="tns:SetTestResultSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetTestSetExecutionStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web method to set execution status of TestSet or Verification Protocol to 'Completed' to MergeReport DB</wsdl:documentation>
+      <wsdl:input message="tns:SetTestSetExecutionStatusSoapIn" />
+      <wsdl:output message="tns:SetTestSetExecutionStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetTestCaseDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web method to set Test Case details for which the execution results</wsdl:documentation>
+      <wsdl:input message="tns:SetTestCaseDetailsSoapIn" />
+      <wsdl:output message="tns:SetTestCaseDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetTestCaseExecutionDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web method to set execution details for the test case</wsdl:documentation>
+      <wsdl:input message="tns:SetTestCaseExecutionDetailsSoapIn" />
+      <wsdl:output message="tns:SetTestCaseExecutionDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetTestStepDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web method to set Test Step details for which the execution results for the Test Case</wsdl:documentation>
+      <wsdl:input message="tns:SetTestStepDetailsSoapIn" />
+      <wsdl:output message="tns:SetTestStepDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetTestStepExecutionDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web method to set test step execution details for the test case</wsdl:documentation>
+      <wsdl:input message="tns:SetTestStepExecutionDetailsSoapIn" />
+      <wsdl:output message="tns:SetTestStepExecutionDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetProject">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web method to set Project for which the execution results</wsdl:documentation>
+      <wsdl:input message="tns:SetProjectSoapIn" />
+      <wsdl:output message="tns:SetProjectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetBuild">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web method to set Build Version for which the execution results will be saved</wsdl:documentation>
+      <wsdl:input message="tns:SetBuildSoapIn" />
+      <wsdl:output message="tns:SetBuildSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetNetworkDomain">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web method to set network domain of the execution machines (to fetch machine details)</wsdl:documentation>
+      <wsdl:input message="tns:SetNetworkDomainSoapIn" />
+      <wsdl:output message="tns:SetNetworkDomainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetServerName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web method to set main Server machine name</wsdl:documentation>
+      <wsdl:input message="tns:SetServerNameSoapIn" />
+      <wsdl:output message="tns:SetServerNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetClientName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web method to set main Client machine name</wsdl:documentation>
+      <wsdl:input message="tns:SetClientNameSoapIn" />
+      <wsdl:output message="tns:SetClientNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetBrowserName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web method to set main Browser name</wsdl:documentation>
+      <wsdl:input message="tns:SetBrowserNameSoapIn" />
+      <wsdl:output message="tns:SetBrowserNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAdditionalServerName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web method to set additional machine name(s) (comma separated values; like 'pa-serv1-ws16/Main Server,pa-cli1-w10/PACS Client')</wsdl:documentation>
+      <wsdl:input message="tns:SetAdditionalServerNameSoapIn" />
+      <wsdl:output message="tns:SetAdditionalServerNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetExecutionMode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web method to set the Execution mode</wsdl:documentation>
+      <wsdl:input message="tns:SetExecutionModeSoapIn" />
+      <wsdl:output message="tns:SetExecutionModeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetTestSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web method to set the Test Set or Verification Protocol</wsdl:documentation>
+      <wsdl:input message="tns:SetTestSetSoapIn" />
+      <wsdl:output message="tns:SetTestSetSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MergeReportServiceSoap" type="tns:MergeReportServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Test">
+      <soap:operation soapAction="http://tempuri.org/Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Start">
+      <soap:operation soapAction="http://tempuri.org/Start" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Stop">
+      <soap:operation soapAction="http://tempuri.org/Stop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTimeZone">
+      <soap:operation soapAction="http://tempuri.org/SetTimeZone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEnvironment">
+      <soap:operation soapAction="http://tempuri.org/SetEnvironment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTestResult">
+      <soap:operation soapAction="http://tempuri.org/SetTestResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTestSetExecutionStatus">
+      <soap:operation soapAction="http://tempuri.org/SetTestSetExecutionStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTestCaseDetails">
+      <soap:operation soapAction="http://tempuri.org/SetTestCaseDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTestCaseExecutionDetails">
+      <soap:operation soapAction="http://tempuri.org/SetTestCaseExecutionDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTestStepDetails">
+      <soap:operation soapAction="http://tempuri.org/SetTestStepDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTestStepExecutionDetails">
+      <soap:operation soapAction="http://tempuri.org/SetTestStepExecutionDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetProject">
+      <soap:operation soapAction="http://tempuri.org/SetProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetBuild">
+      <soap:operation soapAction="http://tempuri.org/SetBuild" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetNetworkDomain">
+      <soap:operation soapAction="http://tempuri.org/SetNetworkDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetServerName">
+      <soap:operation soapAction="http://tempuri.org/SetServerName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClientName">
+      <soap:operation soapAction="http://tempuri.org/SetClientName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetBrowserName">
+      <soap:operation soapAction="http://tempuri.org/SetBrowserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAdditionalServerName">
+      <soap:operation soapAction="http://tempuri.org/SetAdditionalServerName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetExecutionMode">
+      <soap:operation soapAction="http://tempuri.org/SetExecutionMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTestSet">
+      <soap:operation soapAction="http://tempuri.org/SetTestSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MergeReportServiceSoap12" type="tns:MergeReportServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Test">
+      <soap12:operation soapAction="http://tempuri.org/Test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Start">
+      <soap12:operation soapAction="http://tempuri.org/Start" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Stop">
+      <soap12:operation soapAction="http://tempuri.org/Stop" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTimeZone">
+      <soap12:operation soapAction="http://tempuri.org/SetTimeZone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEnvironment">
+      <soap12:operation soapAction="http://tempuri.org/SetEnvironment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTestResult">
+      <soap12:operation soapAction="http://tempuri.org/SetTestResult" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTestSetExecutionStatus">
+      <soap12:operation soapAction="http://tempuri.org/SetTestSetExecutionStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTestCaseDetails">
+      <soap12:operation soapAction="http://tempuri.org/SetTestCaseDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTestCaseExecutionDetails">
+      <soap12:operation soapAction="http://tempuri.org/SetTestCaseExecutionDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTestStepDetails">
+      <soap12:operation soapAction="http://tempuri.org/SetTestStepDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTestStepExecutionDetails">
+      <soap12:operation soapAction="http://tempuri.org/SetTestStepExecutionDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetProject">
+      <soap12:operation soapAction="http://tempuri.org/SetProject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetBuild">
+      <soap12:operation soapAction="http://tempuri.org/SetBuild" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetNetworkDomain">
+      <soap12:operation soapAction="http://tempuri.org/SetNetworkDomain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetServerName">
+      <soap12:operation soapAction="http://tempuri.org/SetServerName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClientName">
+      <soap12:operation soapAction="http://tempuri.org/SetClientName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetBrowserName">
+      <soap12:operation soapAction="http://tempuri.org/SetBrowserName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAdditionalServerName">
+      <soap12:operation soapAction="http://tempuri.org/SetAdditionalServerName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetExecutionMode">
+      <soap12:operation soapAction="http://tempuri.org/SetExecutionMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTestSet">
+      <soap12:operation soapAction="http://tempuri.org/SetTestSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MergeReportService">
+    <wsdl:port name="MergeReportServiceSoap" binding="tns:MergeReportServiceSoap">
+      <soap:address location="http://10.5.38.12:8086/MergeReportService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MergeReportServiceSoap12" binding="tns:MergeReportServiceSoap12">
+      <soap12:address location="http://10.5.38.12:8086/MergeReportService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

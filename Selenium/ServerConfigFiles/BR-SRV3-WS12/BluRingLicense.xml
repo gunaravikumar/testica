@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<License>
+    <!--MAC address 00505697AAEE-->
+    <!--NodeID HA_BR-SRV3-WS12-->
+    <!--start date 4/18/2017 10:37:31 AM-->
+    <!--expiry date 4/18/2019 10:37:31 AM-->
+    <!--duration 2years-->
+    <!--Feature: Name=ica.base.embedded-->
+    <!--Feature: Name=ica.free.standing-->
+    <!--Feature: Name=ica.image.sharing-->
+    <!--Feature: Name=ica.xds-->
+    <!--Feature: Name=ica.base.3d-->
+    <!--Feature: Name=ica.ct.coronary-->
+    <!--Feature: Name=ica.ortho.case-->
+    <!--Feature: Name=ica.oncology.viewer-->
+    <!--Feature: Name=ica.anatomical.localization-->
+    <!--Feature: Name=ica.registration.engine.service-->
+    <!--Feature: Name=ica.fusion-->
+    <!--Feature: Name=ica.volumetric.segmentation-->
+    <!--Feature: Name=webaccess.3d, Version=1.0, NumberOfLicense=4-->
+    <!--Feature: Name=webaccess.base, Version=1.0, NumberOfLicense=50-->
+    <!--Feature: Name=webaccess.admin, Version=1.0, NumberOfLicense=50-->
+    <!--Feature: Name=webaccess.ipod, Version=1.0, NumberOfLicense=4-->
+    <!--Feature: Name=webaccess.blackberry, Version=1.0, NumberOfLicense=4-->
+    <!--Feature: Name=webaccess.maxusers, Version=1.0, NumberOfLicense=200-->
+    <!--Feature: Name=webaccess.maxusers, Version=2.0, NumberOfLicense=200-->
+    <Content><![CDATA[1NqRoAE+p/08Jp11VrRWtk46orar0maroAm1nSGYxGcg2eg80Iws7uzLd50PvUAmid4rNxoOMAVX+MuHvCK52kXJqBGRLHtEeVy6904g63PetvEqmSOTtARAu8cuswvi5tyTILCD/6FKNSfojIBphC6nwmzfmM8SR48dweLdS6wi6YHMLd6Hrv+XETFYBmoYqxoo/LFV9x5x5J+VCLJ5jAUZBawRp/LThPRO/ff3Acn2s68TvZrXcSv66dNVpQmJzDZn/443lvU+SxgqOrQjqT+hhUQfx3OMjw6Z3FwVfjFJth4NetQ+9HMHWSpTV5Jzfx/hJvM5/87r214oz6pzOOSU242rNAgPgQeYDUru1Du0BJQ3Lcpq9CRtCR6ZULc4Y/Xq08ikmCiw0QWSeFUMpd+fwH1wjoILz4j66swPq38PIWUELkyEC6QEWAkpUDy+zR+ZUQgqqTJ1FPJ6PBabjdqDAi2F+BsvzJ0m2XSLpDJ27MWX2ZR45h41h3dMPB9nvzanY3mVV2a0Lpi5DhtyQWpNPWeYCieRgpkt4QFyym5EcsgfxltGlh576rkqqyX2Ghn8MgKmd6VvroeRV+AZZwd9pkX+lXxUXisT2U1QvPYl6Pg6wajWV1lGzm70Vv4nnvIf2qTnQIzp67gHgfG/xlg7ke0D+XjrfygFQlW8ZTp37a384PdSfpCW6xLYdGDVaMfWAm4ps6UovuU22HIsbTIWzNPnzvW+jyFcHeYaqoMn+5fXHl/q3J/E8j164bVTLvuOAqqdNbhcnjD7NXBDpTXmk+/xxoVT6MyBGohq0LSO7QOFe0vLHdmtw3n+4lmLEp+TCctJZ0sgcxEkHBJAsqKbm5XcR64dF3WR4oGVb5y86sXqxYHvJsyp60UCaeiNMPk+SeKzzRn+hBXDhhIe+1UaksRkfdMmbBbFVGQ9l9bqrLDuJZ6cTpVZYbrLXu2j9uj3gsrqiHMiM2PN8SPVTqRnlwGe5KlcHXGlMyIggiWYZ0sFccLS6L2Q0N97xMMWaOHgrRWTA43PFbNxybW7c30QylG1BiQ+H479PQsZWhdrmzGqrTXoMf01JqEj+Kas4/9oKN8ZnKvfHyYYccYUHv0OwPmEcACxYXBZMzr/uAF+wHRqIpOfkid56we6IIr2i5YrWnGDpgVTrgHwUooYobZrSxcEgkyWm8wXsfhvZIGYwTQu7VbB855Tud5BjdGy74v4nb+pjf6DGWzW21qS7oCJre6a+MJtq6UKzmrJHKTKwcIorJJ2WHw1ycOtn7weeuzqLxbxrk0exWBFRmiiduaytZnmseol5eN6WNYESDlAhDeo8lxr9RMWHhh4/BOI+NNLJ9IFUhIBBAMML8JqZ42e8WqI4xoELxRZUW88/UTXe4xHu+rKts4CCd+XU11HCxxH8hRu7BFuAmD5moGUfb7XzDL/c5Xqa8e9KH1JGUzDUmlGK977oCNSYML/z1FjW6IW+rlr+YtXdc0c8ivrE3kzUfCTBygyBVJ1Rv7xeuujEKTeyz5wXsxuVH43wUzSI5w/iT1uUISwooa2APecnjRjpI+Y+nP+ieCkowuwkB6irbr1YsOuYvPdAvQxRYuuaNr9g4MZvww7XkNS0gpGciOBttYsrG2vSq4XZSQMESidiqoYMtQHoZghwKmNrkgohejtLE9pKRBAi3l4Spfz+24m9BhIUeylrm8EsrEDB4XRoc60iKnQbzc3yurTcPadU8r105t0M87oZsrPqgb2phy9spxb4S4Ji9sJc8wGGcM3FDJf9c3U0LQcyUHvTzAT8TtGUxawtRNC9A/LEe2z4t+o0Sd/L/XkPHtigaNKVhHppYoWoVwJOQpiBVeZAsQxOxy2Hp/IfZCrR/jLicjukjklajfeZZNP6kwlT1f6BsMo2Pko8XxIHqOAKuEuYo/rAUnrct3C8J5TDqP5eIqOoGQu2kMhXq4aTjSTSCj6EFBtzkGceU45rMw0fQW7T5upt4H2XA6F4PON6HGjYUSkzbvOMdVHyTzKPZatb8suZ7xcKJcq/4j0VLwdEGTEA8qnK+MF3XC1Gq4TCgqauUIkhqX9r/fFktUcO4QkVzd1dkhENssH1C1EncMmVedgsPgmvHESVhHWIG/F4AT54mbSSzYEG+ipsc1P0jdDEk6VeECcLW2ab1T+ik5w+oS4mAtrWoaw5NSgedfosN4C0tiyZQEjqUwA6rrQNbdq8JKKa3lvu2RVYAJb3+CJL5jLbYyiUe+jogHy7E41hzmiXrRzFULxUBJsdPdF4acCLeV4fcaYtu+1yo1liw8G7A8ZcXblIPUyg6g30YIBf7vrNKJIHAFABmUQ38MoXlqyJuXNjS0+5UHbXA1mloStlXrkmotGCNwbOxKZETTM0+JZKafLTpWbEthOOcUnPNaRnLbxdHbNA5t/dmARG6LuvAPY6Y+EOhaYEvwvgY3P6+nJZ1uA8Fj02GYPBuk8nj4qdtywNVfndTZS9bdkPcCulbEPrfHsA87iuRyMve83aejVpglZpwXsPYFDitobLoiNT59zfflMIeyTj0aGgjMkcVuAgf7GysYDOK4MXb1LtbqaBHOg8/ZuZfVuDFMSd3sWv6jfgtRsxh4g/3xmRKSkLctit6z8zKV1pqWm4lEYnDsHecd/kuGQLU7BcxG5+bwHqmuiLswK6Jq0PhjDpgzBRpYaMczDixr65K7TiK+xodo4M8jmCQGfVfDXuf5vjksFuoizHxvlBhFLEYLqEk6MfT5390dKMf3x/RA8IQu340p4+ArZvL0Iyl4L+DwdmKwQZHWXdKAiREvlXHuWqH1PMMXA1ZBWwyxbA2tsQQp0zPIj4oGwqLi96w5f+hr4jgJeE9EO6FDj8cq3Nvd5ZRDnGQAQAh3qGJ4bUTmbiwu9/JEg6WH4AgJ4n7a9Rw2MTmkzv7RIo+o=]]></Content>
+</License>

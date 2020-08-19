@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<License>
+    <!--MAC address 005056970933-->
+    <!--NodeID HA_BR-SRV7-WS12-->
+    <!--start date 2/7/2019 12:57:28 PM-->
+    <!--expiry date 2/7/2020 12:57:28 PM-->
+    <!--duration 1Y-->
+    <!--Feature: Name=ica.base.embedded-->
+    <!--Feature: Name=ica.free.standing-->
+    <!--Feature: Name=ica.image.sharing-->
+    <!--Feature: Name=ica.xds-->
+    <!--Feature: Name=ica.ct.coronary-->
+    <!--Feature: Name=ica.ortho.case-->
+    <!--Feature: Name=ica.oncology.viewer-->
+    <!--Feature: Name=ica.anatomical.localization-->
+    <!--Feature: Name=ica.registration.engine.service-->
+    <!--Feature: Name=ica.fusion-->
+    <!--Feature: Name=ica.volumetric.segmentation-->
+    <!--Feature: Name=webaccess.base, Version=1.0, NumberOfLicense=50-->
+    <!--Feature: Name=webaccess.admin, Version=1.0, NumberOfLicense=50-->
+    <!--Feature: Name=webaccess.ipod, Version=1.0, NumberOfLicense=4-->
+    <!--Feature: Name=webaccess.blackberry, Version=1.0, NumberOfLicense=4-->
+    <!--Feature: Name=webaccess.maxusers, Version=1.0, NumberOfLicense=200-->
+    <!--Feature: Name=webaccess.maxusers, Version=2.0, NumberOfLicense=200-->
+    <Content><![CDATA[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]]></Content>
+</License>

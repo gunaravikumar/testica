@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ScriptExtensionGroup Name = "Aspire Script Extensions">
+
+<Category Name="Runtime Objects">
+	
+	<ScriptExtension Name = "Application Window Utilities" Author = "Aspire QA" Version = "1.0" HomePage = "www.aspiresys.com">
+      
+	  <Script Name = "WindowUtils.js">
+		
+		<RuntimeObject Name = "WindowUtils">
+			
+			<Method Name = "getChildObject" Routine = "getChildObject"> To return the child element object under the given parent object </Method>
+			
+			<Method Name = "getChildObjects" Routine = "getChildObjects"> To return all the children element objects under the given parent object as an Array </Method>
+			
+			<Method Name = "isChildAvailable" Routine = "isChildAvailable"> To return the visibility status (true/false) of the child element </Method>
+			
+			<Description>
+				Provides access to the aspire QA custom Application window utility features
+			</Description>
+			
+		</RuntimeObject>
+	  </Script>
+	
+		<Description>
+			Interface to custom application window utilities driver by Aspire QA
+		</Description>
+    
+	</ScriptExtension>
+
+    <ScriptExtension Name = "Logger Extension" Author = "Aspire QA" Version = "1.0" HomePage = "www.aspiresys.com">
+      
+	  <Script Name = "Logger.js">
+		
+		<RuntimeObject Name = "Logger">
+			
+			<Method Name = "Info" Routine = "Info"> To Log the given message in Info level </Method>
+			
+			<Method Name = "Success" Routine = "Success"> To Log the given message in Success level </Method>
+			
+			<Method Name = "Error" Routine = "Error"> To Log the given message in Error level </Method>
+			
+			<Method Name = "Warning" Routine = "Warning"> To Log the given message in Warning level </Method>
+			
+			<Method Name = "getReturnEnum" Routine = "getReturnEnum"> To return a new enumerator object </Method>
+			
+			<Method Name = "captureScreenshot" Routine = "captureScreenshot"> To capture the screenshot and save it as image </Method>
+
+			<Method Name = "Picture" Routine = "Picture"> To Log the given the picture object </Method>
+			
+			<Method Name = "RGB" Routine = "RGB"> To return the RGB color code value </Method>
+
+			<Method Name = "logScreenshot" Routine = "logScreenshot"> To add screenshot for the given step number </Method>
+					
+			<Property Name = "CurrentResultScreenshotFolderPath" GetRoutine = "CurrentResultScreenshotFolderPath" SetRoutine = "setCurrentResultScreenshotFolderPath"> Gets or Sets the CurrentResultScreenshotFolderPath attribute </Property>
+								
+			<Description>
+				Provides access to the aspire QA custom Logger reading features
+			</Description>
+			
+		</RuntimeObject>
+      
+	  </Script>
+	
+		<Description>
+			Interface to custom Logger driver by Aspire QA
+		</Description>
+    
+	</ScriptExtension>
+	
+
+</Category>
+
+</ScriptExtensionGroup>

@@ -1,0 +1,13 @@
+@ECHO OFF
+ECHO #### Batch file for deleting IRWSDB and MU2 databases ####
+ECHO.
+ECHO.
+sqlcmd -S localhost\WEBACCESS -E -Q "ALTER DATABASE IRWSDB SET SINGLE_USER WITH ROLLBACK IMMEDIATE"
+sqlcmd -S localhost\WEBACCESS -E -Q "DROP DATABASE IRWSDB"
+ECHO IRWSDB deleted
+sqlcmd -S localhost\WEBACCESS -E -Q "ALTER DATABASE MU2 SET SINGLE_USER WITH ROLLBACK IMMEDIATE"
+sqlcmd -S localhost\WEBACCESS -E -Q "DROP DATABASE MU2"
+ECHO MU2 deleted
+ECHO.
+#:: ECHO Press any key to quit
+#TIMEOUT 10

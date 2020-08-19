@@ -1,0 +1,10 @@
+Total No of Test cases :-	2
+Passed Cases :-	0
+Failed Cases :-	2
+
+S.NO	TESTCASE ID	STATUS	DURATION
+------	---------------	---------	------------
+1	161237	Fail	0:0:3:33
+2	161250	Fail	0:0:3:35
+
+Total Duration :-	00:07:08

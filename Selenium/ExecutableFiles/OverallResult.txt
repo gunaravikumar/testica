@@ -1,0 +1,21 @@
+Hi,
+
+Find below the Regression Execution Status.
+
+Machine Name :	ICA-A1-WS12
+
+Execution Details
+---------------------
+
+Total No of Modules :-	1
+
+Total Execution time :	00:00:07:08
+
+S.NO	MODULE NAME	TOTAL CASES	PASSED CASES	FAILED CASES	DURATION
+------	-----------------	--------------	---------------	--------------	-----------
+1	BasicToolBluRing	2	0	2	0:0:7:8
+
+Regards,
+Automation Team.
+
+Note: Detailed report analysis will be sent shortly.

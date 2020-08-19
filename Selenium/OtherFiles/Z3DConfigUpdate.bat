@@ -1,0 +1,1 @@
+cmd /c powershell C:\drs\sys\util\Z3D_UpdateConfigFromICA.ps1 -icaInstallDir C:\WebAccess > zlog.txt
