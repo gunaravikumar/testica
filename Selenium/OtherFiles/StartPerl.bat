@@ -1,1 +1,0 @@
-perl C:\Users\Administrator\Desktop\Socket.pl

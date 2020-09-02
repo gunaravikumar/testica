@@ -1,2 +1,0 @@
-﻿# List of ignored files. Lines starting with # are commented out.
-# WebAccess\WadoWSSTS\web.config

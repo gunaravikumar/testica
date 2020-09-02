@@ -1,3 +1,0 @@
-﻿# List of ignored tables. Lines starting with # are commented out.
-AuditMessage
-Log

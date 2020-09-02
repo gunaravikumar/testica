@@ -1,7 +1,0 @@
-FYI,
-
-
-ICA build installation success...
-
-
-Note: This is an automation email sent from HOST
